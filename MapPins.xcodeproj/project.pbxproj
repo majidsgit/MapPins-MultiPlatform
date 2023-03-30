@@ -13,6 +13,10 @@
 		1C23AA0D29D5789700F44195 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C23AA0C29D5789700F44195 /* ContentView.swift */; };
 		1C23AA0F29D5789800F44195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C23AA0E29D5789800F44195 /* Assets.xcassets */; };
 		1C23AA1329D5789800F44195 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C23AA1229D5789800F44195 /* Preview Assets.xcassets */; };
+		1CB5024E29D579DC008BE715 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5024D29D579DC008BE715 /* MapsView.swift */; };
+		1CB5025029D57BA0008BE715 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5024F29D57BA0008BE715 /* LocationManager.swift */; };
+		1CB5025229D583A9008BE715 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5025129D583A9008BE715 /* UserLocation.swift */; };
+		1CB5025429D583DB008BE715 /* CLLocationCoordinate2DExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5025329D583DB008BE715 /* CLLocationCoordinate2DExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		1C23AA0E29D5789800F44195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C23AA1029D5789800F44195 /* MapPins.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MapPins.entitlements; sourceTree = "<group>"; };
 		1C23AA1229D5789800F44195 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1CB5024D29D579DC008BE715 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		1CB5024F29D57BA0008BE715 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		1CB5025129D583A9008BE715 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		1CB5025329D583DB008BE715 /* CLLocationCoordinate2DExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2DExtension.swift; sourceTree = "<group>"; };
+		1CB8DCD229D59C0400304FC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,12 @@
 		1C23AA0429D5789700F44195 /* MapPins */ = {
 			isa = PBXGroup;
 			children = (
-				1C23AA0529D5789700F44195 /* MapPinsApp.swift */,
-				1C23AA0729D5789700F44195 /* Persistence.swift */,
-				1C23AA0C29D5789700F44195 /* ContentView.swift */,
+				1CB8DCD229D59C0400304FC4 /* Info.plist */,
+				1CB5025929D585C4008BE715 /* Application */,
+				1CB5025629D585A9008BE715 /* Views */,
+				1CB5025529D58597008BE715 /* Extensions */,
+				1CB5025729D585AF008BE715 /* ViewModels */,
+				1CB5025829D585B8008BE715 /* Models */,
 				1C23AA0E29D5789800F44195 /* Assets.xcassets */,
 				1C23AA1029D5789800F44195 /* MapPins.entitlements */,
 				1C23AA0929D5789700F44195 /* MapPins.xcdatamodeld */,
@@ -73,6 +85,48 @@
 				1C23AA1229D5789800F44195 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1CB5025529D58597008BE715 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5025329D583DB008BE715 /* CLLocationCoordinate2DExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1CB5025629D585A9008BE715 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C23AA0C29D5789700F44195 /* ContentView.swift */,
+				1CB5024D29D579DC008BE715 /* MapsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1CB5025729D585AF008BE715 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5024F29D57BA0008BE715 /* LocationManager.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1CB5025829D585B8008BE715 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1CB5025129D583A9008BE715 /* UserLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1CB5025929D585C4008BE715 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1C23AA0529D5789700F44195 /* MapPinsApp.swift */,
+				1C23AA0729D5789700F44195 /* Persistence.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +201,12 @@
 			files = (
 				1C23AA0629D5789700F44195 /* MapPinsApp.swift in Sources */,
 				1C23AA0B29D5789700F44195 /* MapPins.xcdatamodeld in Sources */,
+				1CB5025029D57BA0008BE715 /* LocationManager.swift in Sources */,
+				1CB5025429D583DB008BE715 /* CLLocationCoordinate2DExtension.swift in Sources */,
+				1CB5024E29D579DC008BE715 /* MapsView.swift in Sources */,
 				1C23AA0D29D5789700F44195 /* ContentView.swift in Sources */,
 				1C23AA0829D5789700F44195 /* Persistence.swift in Sources */,
+				1CB5025229D583A9008BE715 /* UserLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +263,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,6 +317,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -270,6 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MapPins/MapPins.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapPins/Preview Content\"";
@@ -277,6 +340,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapPins/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "uses location to find new friends";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "uses location to find new friends";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -287,10 +354,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.majidjamali.MapPins;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -308,6 +375,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MapPins/MapPins.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MapPins/Preview Content\"";
@@ -315,6 +383,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapPins/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "uses location to find new friends";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "uses location to find new friends";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -325,10 +397,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.majidjamali.MapPins;
 				PRODUCT_NAME = "$(TARGET_NAME)";
